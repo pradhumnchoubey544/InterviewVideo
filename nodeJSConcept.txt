@@ -1,0 +1,235 @@
+##### node.js is opensorce , cross-platform ,js runtime enviriment so we can exicute js outside of enviroment #####
+
+# V8 have power to convert Js code into mashin code(0 or 1). 
+
+how do you run js ?
+1.by using boruser  => V8
+2.by using node.js (run time of js )  =>  V8 + NodeAPI(internaly using c)
+browser is there then why need of node.js :- we need aditionla power like{fileSystem{reat-write},DB connection} which V8 can not do so , lib-uv presnet in node.js to do.
+so V8 & lib-Uv both are bind with "node-binding" in node.js
+
+
+Q as node.js is runtime so Browser also runtime of js ??
+node.js is exist for giving runtime of js but browser have so many thing with-in that one feacher which support js runtime with in that also it not have all feachers which is presnet in node.js ,thatwhy we say node.js is perfact runtime of js .
+
+
+
+# what ever code we run by help of browser "window" object is provided by browser so many pre-build [method and propertye] like {console.log,alert,setTimeout} we can use.
+simerly in node.js "globle" object will provide all pre-build [matohd and object] like "cosole.log,setTimeout,etc..."
+in "node.js (globle object) and browser (window object)" will carry bre-buid mathod & propertyes.
+
+
+# so console.log, alert , settimeout and setinterval all are not js part this are comes with js-runtime itself so it is present in {browser,node.js}
+
+# In "node.js V8(node.js APIs)" and "LibUV" both are bind with "node.js bindings" in node.js.
+
+# diff in LTS(even number) and corrent(odd number) versones.
+
+# REPL => node.js privide REPL which exicute code in terminal.
+
+# process.argv() it will pass value from terminal by the help of "process.argv" which is pressent in globle
+
+# when we instal node.js some API (pre-build method & function) by-default are presnet but not all ,
+ remaing api we have to import manualy as needed like fsNetwork etc.
+
+# diff in node.js and Browser (APIs)
+*Node.js
+globle              
+process 
+fileSystem
+diractry name
+require/import
+
+*Browser
+window
+documnet
+history
+locaton
+navigater
+
+# "borwser window api" is almost similer to "node.js globle api" only few api are diff in both becouse they are not usefull in each of them.
+
+# arcitact of node.js 
+
+
+# node Arictact
+{  V8 ----->  Node.jsAPI[fileSystem,http,path,crypto] -------> [node binding] ------> [LibUV]  }
+V8 will run normal Js code but when need of FS,http,path it will look upon (Node.jsAPI (writern in c++)) and by help of "nodebinding" connet with LibUv becouse "FS,http,path" code writen in LibUv in c language so it that codebase
+so what libery/mathod/function not found in V8 will go to node.js api and go till LIbUv becouse all libery/mathod/function writen in c language in LibUv.
+all this call is asyncronus IO.
+
+# LibUv libery  which is writen in "c language" is use by many laguage like js to interact with operatin system
+# node.js full code is present in GIThib in repositry it is open-source.
+URL:- github.com/odejs/node/tree/main/lib
+
+
+# syncronus and asyncronus coding ??
+syncronus :- the code exicute line by line 
+asyncronus :- code will exicute syncronus and any code came which is time taking code then it will return promise and not stop that syncronus code continue its exicution
+
+console.log("hello");
+settimeout(()=>{console.loh("4000 second code");},4000)
+settimeout(()=>{console.loh("5000 second code");},5000)
+console.log("hi");
+op:- hello    h1   4000 second code    5000 second code
+in executeion "console.log("hello");" part of js so it will go in callstack 
+then setTimeout it is not part of js it is part of WebAPI which is privided by "window" so it will execute by WebAPI
+
+*syncronus will exicute line by line but asyncronus will not execute line by line becouse of time taken to execute that code than probablity of that code .
+
+hear "4000 second code" will print after 4000 milisecond 
+and just after 1000 milisecond  "5000 second code" becouse  
+so advantage of asyncronus it can execute multiple task perely like hear 4000 & 5000 will exicute at same time.
+mean all async task will exicute sametime like api call,settimeout,DOM this is advantage of asyncronus task
+
+# blockign task are handle by asyncronus task 
+# non-blockign task are handle by syncronus task 
+
+
+# how to use pre-build modules in node.js :- as node.js is opensorce so for each task there is prebuild modules in it just 
+we have to "require"/"import" and we got access to many internam mathod and by using this mathod we can perfome so many task based on over need.
+
+
+
+# how much contrubation of node.js in nest.js ??
+Node.js provides the core engine and modules (~70%), ensuring compatibility with its ecosystem.
+NestJS adds a high-level framework and modules (~30%), enabling faster development with a clean, scalable, and maintainable structure.
+Think of NestJS as a car built on the Node.js engine with added components for efficiency, comfort, and advanced features.
+
+
+
+
+how callback is make inportent in asyncronus task
+non-bloaing IO
+thread in js
+thread pool in js 
+what is threads ?
+what is process ?
+event loop ?
+event emiter ?
+obsever desgne pattern ?
+modules syste
+package managmant
+cluster 
+load balancer
+pm2
+0 down time restart
+node worker thread
+
+
+
+
+# in borwser=> have js and come some power come with window object which is present in bowser
+# in node.js=> have js and come some power come with globle object which is present in node.js 
+
+
+
+
+
+
+------------------------------------------------------------------------------------------
+
+
+# map and filter will return array
+# foreach and find and reduce only return only value 
+
+
+
+
+
+#
+let arr = [1,2,"h",'b',2,4,9,'a'];
+
+let numbers = arr.filter((ele) => typeof ele === "number");
+let strings = arr.filter((ele) => typeof ele === "string");
+console.log("Numbers:", numbers);
+console.log("Strings:", strings);
+
+// or  
+
+let numarr=[];
+let strarr=[];
+arr.forEach((ele)=>{
+    if(typeof ele === "number")
+    {
+        numarr.push(ele);
+    }else(typeof ele === "string")
+    {
+         strarr.push(ele);
+    }
+})
+console.log(numarr);
+console.log(strarr);
+ 
+ 
+ 
+
+
+ # how to do function curring in js 
+ it is one function inside another function 
+
+
+ # what is controle and undontro componrt 
+
+ 
+
+
+ # js is syncronus and single threade programing language then how it handle asyncronus task ???
+ js is syncronust and single threded but by then help of (Browser webAPI and node.js WebAPI)& event-loop mechanesem it will manage all asyncronus task and after 
+
+# what is closers ??
+
+
+
+
+ # react focus of declurative approch mean by the help of "defing-algoritham" to compare real-dom and verchual-dom it update DOM automaticly. 
+ # js focuse on imparitive approch in this we have to manuplate DOM by document.getelementById("id1"); like this we have to write manuly to update DOM.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+each persone photo of famely according to the name in form 
+S.No 1 ,2 ,3,4
+
+signater of application 
+
+CGSH diductuon order 
+
+last three month salery sleep 
+
+adhar card of all member 
+
+i-card copy
+
+
+ 
+
+
+
+
+
+
