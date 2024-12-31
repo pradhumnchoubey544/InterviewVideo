@@ -127,64 +127,6 @@ node worker thread
 
 
 
-------------------------------------------------------------------------------------------
-
-
-# map and filter will return array
-# foreach and find and reduce only return only value 
-
-
-
-
-
-#
-let arr = [1,2,"h",'b',2,4,9,'a'];
-
-let numbers = arr.filter((ele) => typeof ele === "number");
-let strings = arr.filter((ele) => typeof ele === "string");
-console.log("Numbers:", numbers);
-console.log("Strings:", strings);
-
-// or  
-
-let numarr=[];
-let strarr=[];
-arr.forEach((ele)=>{
-    if(typeof ele === "number")
-    {
-        numarr.push(ele);
-    }else(typeof ele === "string")
-    {
-         strarr.push(ele);
-    }
-})
-console.log(numarr);
-console.log(strarr);
- 
- 
- 
-
-
- # how to do function curring in js 
- it is one function inside another function 
-
-
- # what is controle and undontro componrt 
-
- 
-
-
- # js is syncronus and single threade programing language then how it handle asyncronus task ???
- js is syncronust and single threded but by then help of (Browser webAPI and node.js WebAPI)& event-loop mechanesem it will manage all asyncronus task and after 
-
-# what is closers ??
-
-
-
-
- # react focus of declurative approch mean by the help of "defing-algoritham" to compare real-dom and verchual-dom it update DOM automaticly. 
- # js focuse on imparitive approch in this we have to manuplate DOM by document.getelementById("id1"); like this we have to write manuly to update DOM.
- 
 
 
 
