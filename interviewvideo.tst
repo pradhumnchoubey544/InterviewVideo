@@ -219,7 +219,23 @@ by importing react-router-dom we can achive routing
 
 # have react can say react is MVC-framework ?
 
+# what is call ,apply ,binding in js ??
 
+# what is debounsing and throtling in react how to achive it ??
+
+# diff in local storage , sesson storage ,cookie storage ??
+
+# function currign in js ??
+
+# event deligation in js ??
+
+# Prototype and Prototypal Inheritance in Javascript ?
+
+# sum(1)(2)(3)(4)(5)(6); what is it and how to solve it ??
+
+# if server will not respont for serten time for particuler api ??
+the API request will “fail” due to a timeout. This behavior is intentional and ensures that your application doesn’t wait indefinitely for a response.
+axios will give option to set timing for it also 
 
 
 
