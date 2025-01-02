@@ -237,6 +237,9 @@ by importing react-router-dom we can achive routing
 the API request will “fail” due to a timeout. This behavior is intentional and ensures that your application doesn’t wait indefinitely for a response.
 axios will give option to set timing for it also 
 
+# what is "inversoneOfContorle" in js.
+if we give power to exicute peace of to another code so there is risk whether it will exicute of not this is called "inversoneOfContorle".
+
 
 
 ----------------------------------------------------------------------------------------------------
@@ -260,6 +263,7 @@ axios will give option to set timing for it also
   *[yes]list[delete] there is chackbox on click the particuler list  delete button will enable and on click of that delete that vlaue will delete from that list.
 
 
+  
 
 
   https://www.youtube.com/shorts/_kZcqO4wYPw
