@@ -142,7 +142,7 @@ Effect started
 * can we usecontext provider two places in dom herierki
 * can we define usecontex provide in a compoent and try to access it in same component is it posible.
 * can  we use two context in over project 
-*how we use usecontex in over application.
+*  how we use usecontex in over application.
 * can we write context lover lever like down side on app.js 
 
 #what is multiple-context ??
@@ -266,8 +266,23 @@ if we give power to exicute peace of to another code so there is risk whether it
   
 
 
+
   https://www.youtube.com/shorts/_kZcqO4wYPw
 ----------------------------------------------------------------------------------------------------
+HTML
+css
+react.js 
+next.js
+node.js 
+nest.js
+
+
+ai intrigaton take corce 
+
+
+
+
+
 
 
 
